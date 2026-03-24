@@ -3,27 +3,22 @@
 
 int main(void)
 {
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA,ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);
 	GPIO_InitTypeDef  GPIO_InitStructure;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_All;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz; 
-	GPIO_Init(GPIOA,&GPIO_InitStructure);
+	GPIO_Init(GPIOB,&GPIO_InitStructure);
 	//GPIO_SetBits(GPIOA,GPIO_Pin_0);
 	//GPIO_ResetBits(GPIOA,GPIO_Pin_0);
 	//GPIO_WriteBit(GPIOA,GPIO_Pin_0,Bit_RESET);
 
-	/* 流水灯：每次只点亮一位，循环左移；若 LED 为低电平点亮，把下一行改成 GPIO_Write(GPIOA, ~Bit_pin & 0x00FF) */
-	uint16_t Bit_pin = 0x0001;
-
 	while (1)
 	{
-		GPIO_Write(GPIOA, ~Bit_pin);
+		GPIO_WriteBit(GPIOB,GPIO_Pin_12,Bit_RESET);
 		Delay_ms(500);
-		Bit_pin <<= 1;
-		if (Bit_pin > 0x0080)
-		{
-			Bit_pin = 0x0001;
-		}
+		GPIO_WriteBit(GPIOB,GPIO_Pin_12,Bit_SET);
+		Delay_ms(500);
 	}
+
 }
