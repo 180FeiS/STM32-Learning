@@ -1,0 +1,34 @@
+# Keil MDK / μVision：编译输出目录（主要体积来源）
+Objects/
+Listings/
+
+# 本机 μVision 窗口布局（路径常含用户名，不宜入库）
+*.uvguix*
+
+# 中间/产物扩展名（与 keilkill.bat 一致；防止输出目录被改到别处时仍被跟踪）
+*.bak
+*.crf
+*.dep
+*.d
+*.ddk
+*.edk
+*.o
+*.obj
+*.omf
+*.axf
+*.htm
+*.lnp
+*.lst
+*.map
+*.mpf
+*.mpj
+*.plg
+*.sct
+*.tra
+*.tmp
+*.__i
+*.iex
+JLinkLog.txt
+
+# 若后续使用 CMSIS 包并生成 RTE 目录，可取消下一行注释
+# RTE/
