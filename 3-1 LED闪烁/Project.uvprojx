@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Start;.\User;.\Library;.\Code</IncludePath>
+              <IncludePath>.\Start;.\User;.\Library;.\Code;.\Hardware</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -648,6 +648,46 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>Hardware</GroupName>
+          <Files>
+            <File>
+              <FileName>Key.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\Key.h</FilePath>
+            </File>
+            <File>
+              <FileName>Key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\Key.c</FilePath>
+            </File>
+            <File>
+              <FileName>LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\LED.c</FilePath>
+            </File>
+            <File>
+              <FileName>LED.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\LED.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Code</GroupName>
+          <Files>
+            <File>
+              <FileName>Delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Code\Delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>Delay.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Code\Delay.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>User</GroupName>
           <Files>
             <File>
@@ -669,21 +709,6 @@
               <FileName>stm32f10x_it.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\User\stm32f10x_it.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Code</GroupName>
-          <Files>
-            <File>
-              <FileName>Delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Code\Delay.c</FilePath>
-            </File>
-            <File>
-              <FileName>Delay.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Code\Delay.h</FilePath>
             </File>
           </Files>
         </Group>
